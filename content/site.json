@@ -1,0 +1,15 @@
+{
+  "brand": "Nic Colarossi",
+  "title": "Nic Colarossi",
+  "description": "Cybersecurity specialist in Philadelphia. FedRAMP continuous monitoring, vulnerability management, and GRC for SAP Concur.",
+  "canonical": "https://niccolarossi.com/",
+  "email": "nic.colarossi@gmail.com",
+  "nav": [
+    { "label": "Work", "href": "index.html#work" },
+    { "label": "Experience", "href": "index.html#experience" },
+    { "label": "About", "href": "index.html#about" },
+    { "label": "Music", "href": "music.html" },
+    { "label": "Contact", "href": "index.html#contact" }
+  ],
+  "footer": "HTML, CSS, and a ciphertext field. No WordPress."
+}

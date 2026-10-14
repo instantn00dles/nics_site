@@ -1,0 +1,328 @@
+media:
+  input: media
+  output: /media
+
+content:
+  - name: chrome
+    label: Site
+    type: group
+    items:
+      - name: site
+        label: Chrome & SEO
+        type: file
+        path: content/site.json
+        format: json
+        fields:
+          - name: brand
+            label: Brand
+            type: string
+          - name: title
+            label: Page title
+            type: string
+          - name: description
+            label: Meta description
+            type: text
+          - name: canonical
+            label: Canonical URL
+            type: string
+          - name: email
+            label: Contact email
+            type: string
+          - name: nav
+            label: Navigation
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: Label
+                type: string
+                required: true
+              - name: href
+                label: Link
+                type: string
+                required: true
+                description: Use index.html#section-id or music.html
+          - name: footer
+            label: Footer note
+            type: string
+
+  - name: home
+    label: Home
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - name: sections
+        label: Sections
+        type: block
+        list: true
+        blockKey: type
+        blocks:
+          - name: hero
+            label: Hero
+            fields:
+              - name: enabled
+                label: Enabled
+                type: boolean
+              - name: kicker
+                label: Kicker
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: sub
+                label: Subhead
+                type: text
+          - name: facts
+            label: Facts
+            fields:
+              - name: enabled
+                label: Enabled
+                type: boolean
+              - name: id
+                label: Section id
+                type: string
+                description: Used as #hash for nav (e.g. work)
+              - name: title
+                label: Title
+                type: string
+              - name: lede
+                label: Lede
+                type: text
+              - name: items
+                label: Facts
+                type: object
+                list: true
+                fields:
+                  - name: value
+                    label: Value
+                    type: string
+                  - name: label
+                    label: Label
+                    type: string
+          - name: work
+            label: Work list
+            fields:
+              - name: enabled
+                label: Enabled
+                type: boolean
+              - name: id
+                label: Section id
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: lede
+                label: Lede
+                type: text
+              - name: items
+                label: Items
+                type: object
+                list: true
+                fields:
+                  - name: heading
+                    label: Heading
+                    type: string
+                  - name: body
+                    label: Body
+                    type: text
+          - name: jobs
+            label: Experience
+            fields:
+              - name: enabled
+                label: Enabled
+                type: boolean
+              - name: id
+                label: Section id
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: lede
+                label: Lede
+                type: text
+              - name: items
+                label: Roles
+                type: object
+                list: true
+                fields:
+                  - name: role
+                    label: Role
+                    type: string
+                  - name: when
+                    label: When
+                    type: string
+                  - name: bullets
+                    label: Bullets
+                    type: string
+                    list: true
+          - name: groups
+            label: Groups / tools
+            fields:
+              - name: enabled
+                label: Enabled
+                type: boolean
+              - name: id
+                label: Section id
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: lede
+                label: Lede
+                type: text
+              - name: items
+                label: Groups
+                type: object
+                list: true
+                fields:
+                  - name: heading
+                    label: Heading
+                    type: string
+                  - name: body
+                    label: Body
+                    type: text
+          - name: about
+            label: About
+            fields:
+              - name: enabled
+                label: Enabled
+                type: boolean
+              - name: id
+                label: Section id
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: lede
+                label: Lede
+                type: text
+              - name: image
+                label: Photo
+                type: image
+              - name: meta
+                label: Meta rows
+                type: object
+                list: true
+                fields:
+                  - name: label
+                    label: Label
+                    type: string
+                  - name: body
+                    label: Body
+                    type: text
+          - name: prose
+            label: Prose
+            fields:
+              - name: enabled
+                label: Enabled
+                type: boolean
+              - name: id
+                label: Section id
+                type: string
+                description: Add a matching nav href like index.html#certs
+              - name: title
+                label: Title
+                type: string
+              - name: lede
+                label: Lede
+                type: text
+              - name: body
+                label: Body
+                type: text
+          - name: contact
+            label: Contact
+            fields:
+              - name: enabled
+                label: Enabled
+                type: boolean
+              - name: id
+                label: Section id
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: lede
+                label: Lede
+                type: text
+              - name: links
+                label: Links
+                type: object
+                list: true
+                fields:
+                  - name: label
+                    label: Label
+                    type: string
+                  - name: href
+                    label: URL
+                    type: string
+
+  - name: music
+    label: Music
+    type: file
+    path: content/music.json
+    format: json
+    fields:
+      - name: kicker
+        label: Kicker
+        type: string
+      - name: title
+        label: Title
+        type: string
+      - name: lede
+        label: Lede
+        type: text
+      - name: empty
+        label: Empty state
+        type: text
+      - name: midi
+        label: Score MIDI
+        type: file
+        description: Standard MIDI file. Glyphs on the field follow this score; BPM in the corner menu sets the pace.
+      - name: bpm
+        label: Default BPM
+        type: number
+        description: Used until the visitor sets their own tempo. The menu remembers their value in the browser.
+      - name: tracks
+        label: Tracks
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: year
+            label: Year
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: kind
+            label: Player
+            type: select
+            options:
+              values:
+                - name: soundcloud
+                  label: SoundCloud
+                - name: bandcamp
+                  label: Bandcamp
+                - name: youtube
+                  label: YouTube
+                - name: spotify
+                  label: Spotify
+                - name: audio
+                  label: Uploaded audio
+          - name: embed_url
+            label: Embed or share URL
+            type: string
+            description: SoundCloud, Bandcamp, YouTube, or Spotify. Phosphor tint is applied where the host allows it.
+          - name: audio
+            label: Audio file
+            type: file
+          - name: cover
+            label: Cover
+            type: image
+          - name: featured
+            label: Featured
+            type: boolean

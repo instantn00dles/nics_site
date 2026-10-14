@@ -1,0 +1,137 @@
+{
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "kicker": "Philadelphia · Public Trust · U.S. Citizen",
+      "title": "Nic Colarossi",
+      "sub": "I run continuous monitoring for SAP Concur’s FedRAMP environment — vulnerabilities, evidence, change review, and the report that has to land on time."
+    },
+    {
+      "type": "facts",
+      "enabled": true,
+      "id": "work",
+      "title": "What I do",
+      "lede": "Day-to-day security operations on a small team for an authorized SaaS platform. The work is tracking, hunting, writing controls, and automating the parts that used to eat a week.",
+      "items": [
+        { "value": "~300", "label": "items on the POA&M" },
+        { "value": "7 days → 1", "label": "to assemble the monthly package" },
+        { "value": "30+", "label": "on-time ConMon submissions" },
+        { "value": "Rev 5 / 20x", "label": "FedRAMP, CR2026, CMMC, IL-5" }
+      ]
+    },
+    {
+      "type": "work",
+      "enabled": true,
+      "id": "work-items",
+      "title": "",
+      "lede": "",
+      "items": [
+        {
+          "heading": "Continuous monitoring, automated",
+          "body": "Python, PowerShell, Bash, and Power Automate now produce the POA&M and ConMon evidence that used to be a week of copy-paste. Same package. Less theater."
+        },
+        {
+          "heading": "Hunting that becomes a finding",
+          "body": "Splunk, Kibana, Nessus, and SQL extracts from Concur. If it matters, it goes on the risk register or the POA&M — not a slide that dies in a meeting."
+        },
+        {
+          "heading": "CR2026 / 20x ops app",
+          "body": "Internal SAP CAP + UI5 app used by the ConMon team for VDR, VER, SCN, and SDR workflows and KSI connectors. Built with Claude Code. OSCAL POA&M export is next."
+        },
+        {
+          "heading": "AI features inside an authorization",
+          "body": "Advise on data handling, significant-change review, and monitoring before AI capabilities reach the FedRAMP-authorized production path."
+        }
+      ]
+    },
+    {
+      "type": "jobs",
+      "enabled": true,
+      "id": "experience",
+      "title": "Experience",
+      "lede": "SAP America, Newtown Square. Three roles, same company.",
+      "items": [
+        {
+          "role": "Information Security Specialist · POA&M Manager",
+          "when": "Feb 2024 — now · SAP Concur",
+          "bullets": [
+            "Vulnerability tracking, evidence collection, change review, ISSO communication, agency reporting.",
+            "Prioritize ~300 open POA&M items with system owners.",
+            "Wrote SSP language accepted for SC-13, AU-2, and related SC / AU controls.",
+            "Completed IL-5 and CMMC gap analyses."
+          ]
+        },
+        {
+          "role": "Associate Solution Support Engineer",
+          "when": "Mar 2022 — Feb 2024 · SAP Fieldglass",
+          "bullets": [
+            "SAML, OAuth, PKI, and TLS/SSL failures — diagnose, then walk the customer and engineering through the fix.",
+            "SQL investigations and KBAs that cut repeat identity and certificate tickets."
+          ]
+        },
+        {
+          "role": "IT Service Desk Associate",
+          "when": "Mar 2021 — Mar 2022 · contract, US Experts Team",
+          "bullets": [
+            "Escalated access and technical incidents for about 100,000 internal users (ServiceNow, Azure AD / SCCM, Jamf)."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "groups",
+      "enabled": true,
+      "id": "stack",
+      "title": "Tools",
+      "items": [
+        {
+          "heading": "Operations",
+          "body": "Vulnerability management, POA&M, threat hunting, SCN review, ConMon evidence, KSI collection, risk register, DISA / CIS STIGs"
+        },
+        {
+          "heading": "Identity",
+          "body": "SAML, OAuth, PKI, TLS/SSL, access reviews"
+        },
+        {
+          "heading": "Platforms",
+          "body": "AWS GovCloud, Splunk, Nessus / Tenable, Kibana, Azure AD, F5, ServiceNow, Jira, SAP CAP, SAPUI5, Kali"
+        },
+        {
+          "heading": "Automation",
+          "body": "Python, PowerShell, Bash, SQL, Power Automate, NIST OSCAL, Claude Code"
+        },
+        {
+          "heading": "Frameworks",
+          "body": "NIST SP 800-53, FedRAMP Rev 5 / 20x, CR2026, CMMC, DoD IL-5"
+        }
+      ]
+    },
+    {
+      "type": "about",
+      "enabled": true,
+      "id": "about",
+      "title": "About",
+      "lede": "Music degree, then a help desk, then identity tickets, then authorized-cloud operations. The through-line is systems that have to stay correct under someone else’s audit.",
+      "image": "assets/nic.jpg",
+      "meta": [
+        { "label": "Security+", "body": "CompTIA. CySA+ exam scheduled September 2026." },
+        { "label": "Also", "body": "Google AI Professional Certificate, Azure Fundamentals, CompTIA A+." },
+        { "label": "Rollins College", "body": "B.A. Music, 2018. Magna Cum Laude, 3.87." },
+        { "label": "Elsewhere", "body": "Bassist. Station manager at WPRK 91.5 FM. Intermediate Japanese." }
+      ]
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "id": "contact",
+      "title": "Contact",
+      "lede": "FedRAMP / GRC work, ConMon automation, or reviewing an AI feature against an authorization boundary.",
+      "links": [
+        { "label": "nic.colarossi@gmail.com", "href": "mailto:nic.colarossi@gmail.com" },
+        { "label": "LinkedIn", "href": "https://www.linkedin.com/in/niccolarossi/" },
+        { "label": "352-434-1650", "href": "tel:+13524341650" }
+      ]
+    }
+  ]
+}

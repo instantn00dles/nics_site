@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="view-transition" content="same-origin">
+  <title>Nic Colarossi — Music</title>
+  <meta name="description" content="Bass, piano, and the other practice. Tracks land here when they are ready to be heard.">
+  <link rel="canonical" href="https://niccolarossi.com/music.html">
+  <meta property="og:title" content="Nic Colarossi — Music">
+  <meta property="og:description" content="Bass, piano, and the other practice.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://niccolarossi.com/music.html">
+  <meta name="theme-color" content="#050705">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="music">
+  <canvas id="field" data-field="notes" aria-hidden="true"></canvas>
+  <aside id="score-dock" class="score-dock is-open">
+    <button type="button" id="score-toggle" class="score-toggle" aria-expanded="true" aria-controls="score-panel">
+      <span class="score-toggle-kicker">BPM</span>
+      <span id="score-chip-bpm">120</span>
+    </button>
+    <div id="score-panel" class="score-panel">
+      <div class="score-row">
+        <label for="score-bpm-range">Tempo <span id="score-meter">4/4</span> <span id="score-key">C</span></label>
+        <span id="score-pos" class="score-pos">BAR 1.1</span>
+      </div>
+      <input id="score-bpm-range" type="range" min="40" max="240" value="120" aria-label="Beats per minute">
+      <div class="score-row">
+        <input id="score-bpm" type="number" min="40" max="240" value="120" aria-label="BPM value">
+        <button type="button" id="score-play" aria-pressed="true">Pause</button>
+      </div>
+      <div class="score-row">
+        <button type="button" id="score-sound" aria-pressed="false">Sound off</button>
+        <select id="score-out" aria-label="MIDI output" hidden></select>
+      </div>
+      <p id="score-sound-hint" class="score-hint"></p>
+      <p id="score-file" class="score-file">score.mid</p>
+      <label class="score-upload">
+        Load MIDI
+        <input id="score-upload" type="file" accept=".mid,.midi,audio/midi">
+      </label>
+    </div>
+  </aside>
+  <div class="content">
+    <header class="nav">
+      <a class="brand" href="index.html">Nic Colarossi</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#about">About</a>
+        <a href="music.html">Music</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero block-hero">
+        <p class="hero-kicker" data-bind="kicker">Bass · piano · WPRK</p>
+        <h1 data-bind="title">Music</h1>
+        <p class="sub" data-bind="lede">The other practice. Bass, piano, and the college-radio habit of putting something on the air and standing behind it. Tracks land here when they are ready to be heard.</p>
+      </section>
+
+      <div class="panel">
+        <div id="music-empty" class="music-empty">
+          <p>Tracks will land here. Until then, the staff keeps moving.</p>
+        </div>
+        <div id="track-grid" class="track-grid" hidden></div>
+      </div>
+    </main>
+
+    <footer>
+      <div>© <span id="year">2026</span> Nicolas Colarossi</div>
+      <div id="footer-note">HTML, CSS, and a ciphertext field. No WordPress.</div>
+    </footer>
+  </div>
+
+  <template id="tpl-track">
+    <article class="track-card reveal">
+      <img data-bind="cover" alt="">
+      <header>
+        <h3 data-bind="title"></h3>
+        <span class="year" data-bind="year"></span>
+      </header>
+      <p data-bind="description"></p>
+      <div data-embed></div>
+    </article>
+  </template>
+
+  <script src="js/embeds.js" defer></script>
+  <script src="js/nav.js" defer></script>
+  <script src="js/content.js" defer></script>
+  <script src="js/midi.js" defer></script>
+  <script src="js/synth.js" defer></script>
+  <script src="js/notes.js" defer></script>
+</body>
+</html>
